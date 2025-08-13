@@ -1,3 +1,5 @@
+#!/usr/bin/env python3
+# -*- coding: utf-8 -*-
 import requests
 import os
 from bs4 import BeautifulSoup
@@ -1371,17 +1373,24 @@ def wait_for_internet(timeout=300, check_interval=5):
 
 
 if __name__ == "__main__":
-    if wait_for_internet():
-        # Initialize Confluence client
-        client = ConfluenceClient(BASE_URL, PAGE_ID, PAT, VERIFY_SSL, SPACE_KEY)
-        
-        # Check current user
-        user = client.get_current_user()
-        if user:
-            print(f"✅ Authenticated as: {user.get('displayName', 'Unknown')}")
-        
-        # Launch GUI with manager name
-        app = ConfluenceEditor(client, MANAGER_NAME)
-        app.mainloop()
-    else:
-        print("❌ Could not connect to the internet after waiting.")
+    try:
+        if wait_for_internet():
+            # Initialize Confluence client
+            client = ConfluenceClient(BASE_URL, PAGE_ID, PAT, VERIFY_SSL, SPACE_KEY)
+            
+            # Check current user
+            user = client.get_current_user()
+            if user:
+                print(f"✅ Authenticated as: {user.get('displayName', 'Unknown')}")
+            
+            # Launch GUI with manager name
+            app = ConfluenceEditor(client, MANAGER_NAME)
+            app.mainloop()
+        else:
+            print("❌ Could not connect to the internet after waiting.")
+            input("\nPress Enter to exit...")
+    except Exception as e:
+        print(f"\n❌ Error occurred: {e}")
+        import traceback
+        traceback.print_exc()
+        input("\nPress Enter to exit...")
