@@ -113,3 +113,21 @@ python handoff.py
 - **Search & Edit**: Find and modify any handoff page  
 - **Create Page**: Generate today's handoff document  
 - **Delete Page**: Remove outdated pages  
+
+## 🤝 Contributing
+
+1. Fork the repository
+2. Create a feature branch (`git checkout -b feature/AmazingFeature`)
+3. Commit your changes (`git commit -m 'Add some AmazingFeature'`)
+4. Push to the branch (`git push origin feature/AmazingFeature`)
+5. Open a Pull Request
+
+## 📝 License
+
+This project is proprietary to Semtech Corporation. All rights reserved.
+
+## 👥 Contact
+
+- **Project Developer**: [Pranav Doshi]
+- **Email**: [pdoshi@semtech.com]
+- **Team**: GNOC
