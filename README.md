@@ -5,7 +5,7 @@ A desktop application for managing daily shift handoff documentation in Confluen
 ## 🎯 Purpose
 
 Handoff simplifies the daily shift handover process by providing a centralized tool to:
-- View yesterday's handoff notes instantly
+- View previous day's handoff notes instantly
 - Create standardized daily handoff pages
 - Edit existing handoff documentation
 - Search and manage handoff pages efficiently
@@ -84,9 +84,9 @@ Handoff simplifies the daily shift handover process by providing a centralized t
 |--------------|-----------------------------------------------------|--------------------------------------|
 | PAT          | Personal Access Token for Confluence API            | ODYwMjAwNDQ5MTU5O...                  |
 | BASE_URL     | Your Confluence instance URL                        | https://confluence.company.com       |
-| PAGE_ID      | Parent page ID where handoffs are stored            | 494247551                            |
-| SPACE_KEY    | Confluence space key                                | GNOC or NetEng                       |
-| MANAGER_NAME | Your name for auto-generated titles                 | Asim                                 |
+| PAGE_ID      | Parent page ID where handoffs are stored            | 123456789                            |
+| SPACE_KEY    | Confluence space key                                | space key                            |
+| MANAGER_NAME | Your name for auto-generated titles                 | Jhon                                 |
 
 ### Getting Your PAT Token
 1. Log into Confluence
